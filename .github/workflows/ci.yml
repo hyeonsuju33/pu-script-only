@@ -1,0 +1,12 @@
+name: Script CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: macos-latset
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash build.sh
